@@ -11,7 +11,8 @@ var MovieSelector = React.createClass({
 
     render: function(){
        var options = this.props.movies.map(function(movie,index){
-        return <option value={index} key={index}>{movie.show_title}
+        return <option value={index} key={index}>
+        {movie.show_title}
         </option>
     })
        return (

@@ -7,8 +7,6 @@ var MovieDetail = function(props){
     return (<div>
         <h4> {props.movie.show_title}</h4>
         </div>)
-
-
 };
 
 module.exports = MovieDetail;
