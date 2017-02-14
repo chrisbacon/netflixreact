@@ -7,6 +7,7 @@ var MovieSelector = React.createClass({
     handleChange: function(event){
         var newIndex = event.target.value;
         this.setState({selectedIndex: newIndex});
+        this.props.selectMovie(this.props.movies[newIndex]);
     },
 
     render: function(){
@@ -16,8 +17,7 @@ var MovieSelector = React.createClass({
         </option>
     })
        return (
-        <select id="movies" value={this.state.selectedIndex}
-        onChange={this.handleChange}>
+        <select id="movies" value={this.state.selectedIndex} onChange={this.handleChange}>
         {options}
         </select>
         );
